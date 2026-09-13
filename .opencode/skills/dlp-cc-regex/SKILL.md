@@ -43,6 +43,19 @@ Load this skill for changes to:
 - Keep the footer bio accurate: Remo Mattei, Cloudflare One, Zero Trust, Workers,
   and Linux demos at itlinux.cc. Do not invent credentials or job titles.
 
+## Sales and customer deployment
+
+The public demo at `https://dlp-regex.itlinux.cc/` is for demonstrations only and
+requires no login, token, npm, Terraform, or Cloudflare account. Use synthetic
+samples; never paste real customer credentials.
+
+Customer deployment is a separate customer-owned operation. Confirm the customer
+has Zero Trust/DLP enabled, an account ID, and an API token with **Account → Zero
+Trust → Edit**. Add **Account → Workers Scripts → Edit** only when deploying the
+Worker. The customer must approve the traffic inspection/TLS/Gateway design and
+store the token in their own secret manager or deployment environment. Never ask
+for, paste, log, or commit the token in the skill or repository.
+
 ## Catalog changes
 
 Every non-custom preset must include:

@@ -15,9 +15,25 @@ Demo flow:
 2. Show the detection note and synthetic sample.
 3. Paste customer-safe sample text; never paste a real credential.
 4. Show the Rust-authoritative validation result and matches.
-5. Copy the regex or Terraform entry only when the customer is ready to implement.
+5. Copy the validated Rust regex when the customer is ready to implement.
 
 The live demo requires no npm, Terraform, Docker, Cloudflare credentials, or login.
+
+## Customer deployment prerequisites
+
+The public demo and customer deployment are separate. To deploy a rule into a
+customer's own Cloudflare environment, the customer needs:
+
+- A Cloudflare account with Zero Trust/DLP enabled.
+- Their Cloudflare account ID and target Zero Trust configuration.
+- A customer-owned API token with **Account → Zero Trust → Edit** for DLP/Gateway
+  configuration.
+- **Account → Workers Scripts → Edit** only if they also deploy the Worker.
+- Organizational approval for the intended traffic inspection and TLS/Gateway
+  enforcement.
+
+The customer must create and store the token in their own secret manager or
+deployment environment. Never paste it into the public demo, this skill, or Git.
 
 ## Install the skill for OpenCode
 
