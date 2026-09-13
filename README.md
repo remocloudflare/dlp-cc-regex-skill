@@ -39,8 +39,6 @@ deployment environment. Never paste it into the public demo, this skill, or Git.
 
 OpenCode can discover the installed project skill directly:
 
-![OpenCode skill discovered locally](docs/screenshots/opencode-skill-installed.png)
-
 ### OpenCode detector investigation
 
 Example OpenCode investigation of the Google API key detector and Cloudflare DLP
@@ -67,6 +65,10 @@ Copy `.opencode/skills/dlp-cc-regex/` into the project root, or clone this repos
 ```
 
 OpenCode also discovers `.opencode/skills/<name>/SKILL.md` when this repository is used as the project directory.
+
+Example of OpenCode discovering the installed skill:
+
+![OpenCode skill discovered locally](docs/screenshots/opencode-skill-installed.png)
 
 ## Use locally
 
