@@ -2,7 +2,24 @@
 
 A reusable OpenCode skill for the Cloudflare DLP Regex Builder.
 
-## Install for a project
+## For sales and customer demos
+
+Sales users do not need a development environment. Open the live builder:
+
+<https://dlp-regex.itlinux.cc/>
+
+Demo flow:
+
+1. Choose a provider preset, such as **AWS access key ID**, **Google API key**, or
+   **Azure Storage SAS**.
+2. Show the detection note and synthetic sample.
+3. Paste customer-safe sample text; never paste a real credential.
+4. Show the Rust-authoritative validation result and matches.
+5. Copy the regex or Terraform entry only when the customer is ready to implement.
+
+The live demo requires no npm, Terraform, Docker, Cloudflare credentials, or login.
+
+## Install the skill for OpenCode
 
 Copy `.opencode/skills/dlp-cc-regex/` into the project root, or clone this repository and add its path to `opencode.json`:
 
