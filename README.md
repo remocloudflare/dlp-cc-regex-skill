@@ -66,15 +66,15 @@ Copy `.opencode/skills/dlp-cc-regex/` into the project root, or clone this repos
 
 OpenCode also discovers `.opencode/skills/<name>/SKILL.md` when this repository is used as the project directory.
 
-Example of OpenCode discovering the installed skill:
-
-![OpenCode skill discovered locally](docs/screenshots/opencode-skill-installed.png)
-
 ## Use locally
 
 Install this skill in OpenCode. It provides the project guidance automatically;
 users do not need to install npm, Terraform, Docker, or Cloudflare credentials just
 to load the skill.
+
+Example of OpenCode discovering the installed skill locally:
+
+![OpenCode skill discovered locally](docs/screenshots/opencode-skill-installed.png)
 
 For the runnable DLP Builder, use the public demo or the application repository's
 own local-development instructions. This skill repository contains guidance only,
