@@ -35,6 +35,14 @@ customer's own Cloudflare environment, the customer needs:
 The customer must create and store the token in their own secret manager or
 deployment environment. Never paste it into the public demo, this skill, or Git.
 
+## Screenshots
+
+The live builder is available at <https://dlp-regex.itlinux.cc/>.
+
+![DLP Regex Builder desktop](docs/screenshots/dlp-regex-builder-desktop.png)
+
+![DLP Regex Builder mobile](docs/screenshots/dlp-regex-builder-mobile.png)
+
 ## Install the skill for OpenCode
 
 Copy `.opencode/skills/dlp-cc-regex/` into the project root, or clone this repository and add its path to `opencode.json`:
