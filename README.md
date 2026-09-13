@@ -21,8 +21,12 @@ Rust/WASM validator is committed in the application repository:
 
 ```bash
 npm test
-npx --yes wrangler@4.131.1 dev --local --port 8799
+npm run dev
 ```
+
+`npm run dev` starts the local-only builder at `http://localhost:8799`.
+No Terraform or Cloudflare credentials are required. `npm run dev:remote` is
+available only when a remote Wrangler session is intentionally needed.
 
 Docker is only needed when rebuilding the WASM artifact. Terraform is optional and
 only needed for Cloudflare infrastructure or production deployment.
