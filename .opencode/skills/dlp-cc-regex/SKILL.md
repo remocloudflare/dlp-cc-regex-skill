@@ -11,9 +11,10 @@ metadata:
 
 # DLP Regex Builder
 
-Project-specific guidance for the Cloudflare DLP Regex Builder. This Worker provides
-high-confidence security and secrets presets, validates patterns with Rust regex in
-WASM, previews matches with the Rust scanner, and deploys through Terraform.
+Guidance for the Cloudflare DLP Regex Builder. This Worker provides high-confidence
+security and secrets presets and validates and scans patterns with Rust regex in WASM.
+Local Wrangler development is the default; Terraform is only for infrastructure and
+production deployment.
 
 ## When to use
 
@@ -68,6 +69,24 @@ Keep category names stable because the UI renders them as option groups.
 - Escape dynamic HTML or use `textContent`; do not introduce an XSS path.
 - Keep Rust scan results authoritative and preserve Luhn as a post-filter only.
 
+## Local-first workflow
+
+Do not require a remote Worker or Terraform to use the builder. The Worker is
+stateless and has no bindings, so run it locally with Wrangler:
+
+```bash
+npm test
+npx --yes wrangler@4.131.1 dev --local --port 8799
+```
+
+Open `http://localhost:8799/`. Verify `/health`, `/`, and `/scan` locally. The local
+Worker includes the committed Rust WASM module and uses the same validation and scan
+path as production. Stop the Wrangler process when finished.
+
+Use Terraform only when the user explicitly requests Cloudflare infrastructure or a
+production update. A local UI/test task must not run `terraform apply`, contact the
+remote Worker, or require Cloudflare credentials.
+
 ## Rust/WASM workflow
 
 The pinned Rust dependency is `regex = 1.13.1`. The direct ABI exports memory,
@@ -89,6 +108,7 @@ Before claiming a change is complete:
 
 ```bash
 npm test
+npx --yes wrangler@4.131.1 dev --local --port 8799
 npx --yes wrangler@4.131.1 deploy --dry-run
 terraform -chdir=terraform fmt -check
 terraform -chdir=terraform validate
