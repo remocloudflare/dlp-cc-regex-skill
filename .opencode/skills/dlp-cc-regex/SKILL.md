@@ -71,23 +71,14 @@ Keep category names stable because the UI renders them as option groups.
 
 ## Local-first workflow
 
-Do not require a remote Worker or Terraform to use the builder. The Worker is
-stateless and has no bindings, so run it locally with Wrangler:
-
-```bash
-npm test
-npx --yes wrangler@4.131.1 dev --local --port 8799
-```
-
-Open `http://localhost:8799/`. Verify `/health`, `/`, and `/scan` locally. The local
-Worker includes the committed Rust WASM module and uses the same validation and scan
-path as production. Stop the Wrangler process when finished.
+Local development is the default and does not require a remote Worker or Terraform.
+When working in the application repository, follow its local-development commands.
+The skill itself is guidance only; do not ask users to install project dependencies
+merely to load this skill.
 
 Terraform is optional. Use it only when the user explicitly requests Cloudflare
 infrastructure or a production update. A local UI/test task must not require
-Terraform, run `terraform apply`, contact the remote Worker, or require Cloudflare
-credentials. Users without Terraform can use the committed WASM artifact and the
-local Wrangler workflow normally.
+Terraform, contact the remote Worker, or require Cloudflare credentials.
 
 ## Rust/WASM workflow
 

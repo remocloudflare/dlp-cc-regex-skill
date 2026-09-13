@@ -14,22 +14,15 @@ Copy `.opencode/skills/dlp-cc-regex/` into the project root, or clone this repos
 
 OpenCode also discovers `.opencode/skills/<name>/SKILL.md` when this repository is used as the project directory.
 
-## Local use without Terraform
+## Use locally
 
-Terraform is not required for local development. The builder is stateless and the
-Rust/WASM validator is committed in the application repository:
+Install this skill in OpenCode. It provides the project guidance automatically;
+users do not need to install npm, Terraform, Docker, or Cloudflare credentials just
+to load the skill.
 
-```bash
-npm test
-npm run dev
-```
-
-`npm run dev` starts the local-only builder at `http://localhost:8799`.
-No Terraform or Cloudflare credentials are required. `npm run dev:remote` is
-available only when a remote Wrangler session is intentionally needed.
-
-Docker is only needed when rebuilding the WASM artifact. Terraform is optional and
-only needed for Cloudflare infrastructure or production deployment.
+For the runnable DLP Builder, use the public demo or the application repository's
+own local-development instructions. This skill repository contains guidance only,
+not the Worker runtime or its dependencies.
 
 ## Contents
 
