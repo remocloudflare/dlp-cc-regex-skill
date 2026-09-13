@@ -35,6 +35,13 @@ customer's own Cloudflare environment, the customer needs:
 The customer must create and store the token in their own secret manager or
 deployment environment. Never paste it into the public demo, this skill, or Git.
 
+## Detector investigation example
+
+Example OpenCode investigation of the Google API key detector and Cloudflare DLP
+Rust-regex requirements:
+
+![Google API key detector investigation](docs/screenshots/google-api-key-detector-investigation.png)
+
 ## Screenshots
 
 The live builder is available at <https://dlp-regex.itlinux.cc/>.
