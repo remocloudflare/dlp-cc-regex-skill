@@ -35,6 +35,12 @@ customer's own Cloudflare environment, the customer needs:
 The customer must create and store the token in their own secret manager or
 deployment environment. Never paste it into the public demo, this skill, or Git.
 
+## Skill discovery example
+
+OpenCode can discover the installed project skill directly:
+
+![OpenCode skill discovered locally](docs/screenshots/opencode-skill-installed.png)
+
 ## Detector investigation example
 
 Example OpenCode investigation of the Google API key detector and Cloudflare DLP
