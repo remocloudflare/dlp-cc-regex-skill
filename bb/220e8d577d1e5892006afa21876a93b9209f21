@@ -1,0 +1,19 @@
+README.md
+  s_5ba4bcff44ded5::t_bdd33723c206d2 17,19-21,23-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "bb220e8d577d1e5892006afa21876a93b9209f21",
+  "prompts": {},
+  "sessions": {
+    "s_5ba4bcff44ded5": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_f62eed344ffez4tc9PdOiBUJCX",
+        "model": "gpt-5.6-luna"
+      },
+      "human_author": "remo <remo@cloudflare.com>"
+    }
+  }
+}
